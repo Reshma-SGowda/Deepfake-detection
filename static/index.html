@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Veritas — Deepfake Defence</title><link rel="stylesheet" href="/static/styles.css"></head>
+<body><div class="orb orb-one"></div><div class="orb orb-two"></div><main>
+  <nav><a class="brand" href="/"><i></i>VERITAS <small>FORENSICS</small></a><div class="status"><span></span> SYSTEM ONLINE</div></nav>
+  <section class="hero"><p class="eyebrow">IMAGE AUTHENTICITY INTELLIGENCE</p><h1>See what the pixels<br><em>are trying to hide.</em></h1><p class="lede">Run explainable forensic checks on an image: compression artifacts, metadata signals, texture variation, and illumination consistency.</p></section>
+  <section id="dropzone" class="dropzone"><input id="file" type="file" accept="image/jpeg,image/png,image/webp" hidden><div class="upload-icon">↥</div><h2>Drop an image for analysis</h2><p>JPEG, PNG or WebP · forensic analysis runs locally</p><button id="browse">Choose file</button></section>
+  <section id="progress" class="progress hidden"><div><b>FORENSIC PIPELINE</b><span id="progress-label">Preparing analysis...</span></div><div class="track"><i></i></div></section>
+  <section id="dashboard" class="dashboard hidden">
+    <article class="verdict card"><p class="eyebrow">AUTHENTICITY SIGNAL</p><div class="gauge"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"/><circle id="gauge-ring" cx="60" cy="60" r="52"/></svg><strong id="score">--</strong><span>CONCERN</span></div><h2 id="verdict">Awaiting analysis</h2><p class="disclaimer">Heuristic forensic indicators — not a trained deepfake classification.</p></article>
+    <article class="indicators card"><p class="eyebrow">FORENSIC INDICATORS</p><div id="metric-list"></div></article>
+    <article class="comparison card"><div class="panel-title"><p class="eyebrow">ELA REGION VIEW</p><span>DRAG TO COMPARE</span></div><div id="compare" class="compare"><img id="original" alt="Uploaded image"><div id="heat-layer"><img id="heatmap" alt="Error Level Analysis heatmap"></div><input id="slider" type="range" min="0" max="100" value="50"></div><div class="legend"><span>ORIGINAL</span><span>ELA HEATMAP</span></div></article>
+    <article class="audit card"><p class="eyebrow">AUDIT LOG</p><div id="alerts"></div><button id="again" class="outline">Analyze another image</button></article>
+  </section>
+  <footer>VERITAS / EXPLAINABLE IMAGE FORENSICS <span>•</span> ANALYZE RESPONSIBLY</footer>
+</main><script src="/static/app.js"></script></body></html>
